@@ -1,0 +1,104 @@
+/* Infografía "Mi ruta hacia la libertad" - tamaño A4 vertical (794 x 1123 px a 96 ppp)
+   Misma paleta de la página web. Para imprimir: Ctrl+P, tamaño A4, márgenes "Ninguno"
+   y activar "Gráficos de fondo". */
+
+:root {
+  --ink: #0e2240;
+  --text: #1f2937;
+  --bronze: #8c6a2f;
+  --burgundy: #7a1f2b;
+  --navy-mid: #1f3a63;
+  --blush: #f6ecee;
+  --blush-line: #d9b8be;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --sans: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --hand: 'Caveat', cursive;
+}
+
+* { box-sizing: border-box; }
+@page { size: A4 portrait; margin: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; background: #e5e8ed; }
+
+.page {
+  width: 794px;
+  height: 1123px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #ffffff;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.35;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+h1, h2, h3 { font-family: var(--serif); color: var(--ink); margin: 0; }
+p { margin: 0; }
+ul { margin: 0; }
+
+/* Encabezado */
+.head { background: var(--blush); border: 2px solid var(--ink); border-radius: 22px; padding: 16px 22px; display: flex; align-items: center; gap: 18px; }
+.flower { flex: none; }
+.head-text { flex: 1 1 auto; min-width: 0; }
+.head h1 { font-weight: 700; font-size: 38px; line-height: 1.05; margin-bottom: 6px; }
+.head p { font-size: 14px; color: #374151; }
+.note-hand { flex: none; font-family: var(--hand); font-weight: 600; font-size: 26px; line-height: 1; color: var(--burgundy); transform: rotate(-6deg); text-align: center; }
+
+/* Títulos de bloque */
+.block-title { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.block-title h2 { font-weight: 700; font-size: 21px; line-height: 1.2; }
+.block-aside { font-size: 12.5px; color: #374151; }
+
+/* Bloque 1: camino de fases */
+.path-box { position: relative; border: 1.5px solid var(--blush-line); border-radius: 18px; padding: 14px 12px 10px; }
+.path-line { position: absolute; left: 12%; right: 12%; top: 27px; border-top: 3px dotted var(--bronze); }
+.stones { position: relative; list-style: none; margin: 0; padding: 0; display: flex; gap: 6px; }
+.stones li { flex: 1 1 0; min-width: 0; text-align: center; }
+.stone { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; box-sizing: content-box; margin: 0 auto 6px; border-radius: 50%; border: 3px solid #ffffff; background: var(--ink); color: #ffffff; font-weight: 700; font-size: 14px; }
+.stone-final { background: var(--burgundy); }
+.stones strong { display: block; font-size: 12.5px; color: var(--ink); line-height: 1.2; }
+.stones small { display: block; font-size: 12px; color: #4b5563; }
+.path-note { margin-top: 10px; text-align: center; font-size: 12.5px; color: #374151; }
+
+/* Bloque 2: redención */
+.row-3 { display: flex; gap: 10px; }
+.row-3 > * { flex: 1 1 0; min-width: 0; }
+.soft-card { background: var(--blush); border-radius: 18px; padding: 12px; display: flex; gap: 10px; align-items: flex-start; }
+.soft-card svg { flex: none; }
+.soft-card strong { display: block; font-size: 14px; color: var(--ink); }
+.soft-card p { font-size: 12.5px; }
+
+/* Bloque 3: fracciones */
+.frac { border: 2px solid var(--c); border-radius: 20px; overflow: hidden; background: #ffffff; }
+.frac-1 { --c: var(--navy-mid); }
+.frac-2 { --c: var(--bronze); }
+.frac-3 { --c: var(--burgundy); }
+.frac-head { background: var(--c); color: #ffffff; padding: 10px 14px; display: flex; align-items: baseline; gap: 8px; font-size: 12.5px; }
+.frac-num { font-family: var(--serif); font-weight: 700; font-size: 32px; line-height: 1; }
+.frac-body { padding: 12px 14px 14px; }
+.frac-body h3 { font-weight: 700; font-size: 14px; line-height: 1.25; margin-bottom: 8px; }
+.frac-body ul { padding-left: 16px; display: flex; flex-direction: column; gap: 5px; font-size: 12.5px; margin-bottom: 10px; }
+.tag { display: inline-block; background: var(--blush); border-radius: 12px; padding: 4px 10px; font-size: 12px; color: var(--ink); }
+.foot-note { margin-top: 8px; font-size: 12.5px; color: #374151; }
+
+/* Bloque 4: requisitos */
+.pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.pills li { display: flex; align-items: center; gap: 7px; border: 1.5px solid var(--ink); border-radius: 20px; padding: 6px 12px; font-size: 12.5px; font-weight: 700; color: var(--ink); }
+
+/* Bloque 5: orientación */
+.foot { margin-top: auto; background: var(--ink); color: #ffffff; border-radius: 22px; padding: 16px 22px; display: flex; align-items: center; gap: 20px; }
+.foot-text { flex: 1 1 auto; min-width: 0; }
+.foot h2 { color: #ffffff; font-weight: 700; font-size: 21px; line-height: 1.2; margin-bottom: 6px; }
+.foot p { font-size: 13px; color: #e6ecf5; margin-bottom: 8px; }
+.foot .foot-small { font-size: 12px; color: #c9d3e3; margin-bottom: 4px; }
+.foot .foot-small:last-child { margin-bottom: 0; }
+.qr-slot { flex: none; width: 92px; height: 92px; border: 2px dashed #d9b97a; border-radius: 14px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; font-size: 12px; line-height: 1.25; color: #f4e6c8; }
+.qr-slot img { display: block; width: 100%; height: 100%; }
+
+@media print {
+  body { background: #ffffff; }
+  .page { margin: 0; }
+}

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi ruta hacia la libertad</title>
+<meta name="description" content="Orientación en lenguaje claro sobre el tratamiento penitenciario, la redención de pena y los requisitos de los beneficios en Colombia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#inicio">
+      <span class="brand-name">Mi ruta hacia la libertad</span>
+      <span class="brand-sub">Consultorio Jurídico, Universidad Católica de Colombia</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" class="nav" aria-label="Principal">
+      <a href="#fases">Fases</a>
+      <a href="#redencion">Redención</a>
+      <a href="#fracciones">Fracciones</a>
+      <a href="#revisar">Qué revisar</a>
+      <a href="#autoridades">Autoridades</a>
+      <a href="#normas">Normas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- Sección 1: inicio -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <h1>Mi ruta hacia la libertad</h1>
+      <p class="hero-lead">Orientación en lenguaje claro sobre el tratamiento penitenciario, la redención de pena y los requisitos de los beneficios en Colombia.</p>
+
+      <div class="route-card">
+        <h2>Una condena, tres puntos de revisión</h2>
+        <p class="muted">Seleccione una fracción para ver con qué beneficio se relaciona.</p>
+        <div class="route-bar" id="barra">
+          <div class="route-track"></div>
+          <div class="route-fill" id="relleno"></div>
+          <!-- Los marcadores se generan en js/main.js -->
+        </div>
+        <div class="route-ends"><span>Inicio de la condena</span><span>Condena cumplida</span></div>
+        <div class="route-summary">
+          <p id="resumen-hero"></p>
+          <a href="#fracciones">Ver requisitos completos</a>
+        </div>
+        <p class="small muted">La barra es una ilustración. Las fracciones se cuentan sobre la pena impuesta, no son etapas que deban cumplirse en orden y alcanzar una no garantiza el beneficio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advertencia legal -->
+  <section class="legal-notice" aria-label="Advertencia legal">
+    <div class="container">
+      <p><strong>Advertencia legal.</strong> El contenido de esta página es informativo y pedagógico. Ningún beneficio es automático: depende del análisis de cada caso, de los requisitos legales vigentes y de la valoración de las autoridades penitenciarias y judiciales competentes. No reemplaza la asesoría jurídica personalizada.</p>
+    </div>
+  </section>
+
+  <!-- Sección 2: fases -->
+  <section id="fases" class="section container">
+    <div class="rule"></div>
+    <h2 class="section-title">Las fases del tratamiento penitenciario progresivo</h2>
+    <p class="section-intro">El tratamiento se organiza por fases, con seguimiento y evaluación continuos. El avance de una fase a otra no es consecuencia del solo paso del tiempo: depende de criterios que se evalúan.</p>
+    <ol class="phases">
+      <li class="card"><span class="step">1</span><h3>Observación, diagnóstico y clasificación</h3><p class="small muted">Primera fase</p><p>Se conoce a la persona y se define su plan de tratamiento.</p></li>
+      <li class="card"><span class="step">2</span><h3>Alta seguridad</h3><p class="small muted">Período cerrado</p><p>Tratamiento con mayor control y seguimiento.</p></li>
+      <li class="card"><span class="step">3</span><h3>Mediana seguridad</h3><p class="small muted">Período semiabierto</p><p>Más participación en actividades de tratamiento.</p></li>
+      <li class="card"><span class="step">4</span><h3>Mínima seguridad</h3><p class="small muted">Período abierto</p><p>Preparación gradual para la vida en libertad.</p></li>
+      <li class="card"><span class="step">5</span><h3>Confianza</h3><p class="small muted">Coincide con la libertad condicional</p><p>Fase final del proceso de resocialización.</p></li>
+    </ol>
+    <div class="card card-dashed">
+      <h3>Ficha descriptiva de cada fase</h3>
+      <p class="muted">Finalidad y objetivos del régimen, participación de la persona privada de la libertad en trabajo, estudio o enseñanza, e intervención del Consejo de Evaluación y Tratamiento (CET) y de las demás instancias de seguimiento.</p>
+    </div>
+  </section>
+
+  <!-- Sección 3: redención -->
+  <section id="redencion" class="section container">
+    <div class="rule"></div>
+    <h2 class="section-title">Redención de pena por trabajo, estudio y enseñanza</h2>
+    <p class="section-intro">La redención reconoce tiempo por actividades de tratamiento. No basta con participar: la actividad debe estar certificada y evaluada conforme a las reglas vigentes.</p>
+    <div class="grid-3">
+      <article class="card"><h3>Trabajo</h3><p>Actividades laborales que pueden reconocerse, siempre que estén certificadas y evaluadas conforme a las reglas vigentes.</p></article>
+      <article class="card"><h3>Estudio</h3><p>Participación en actividades educativas que cumplan las condiciones establecidas para ser reconocidas.</p></article>
+      <article class="card"><h3>Enseñanza</h3><p>Actividades de instrucción o enseñanza que pueden reconocerse según las disposiciones penitenciarias aplicables.</p></article>
+    </div>
+    <div class="card example">
+      <h3>Tiempo físico y tiempo redimido</h3>
+      <p class="small muted">Ejemplo ilustrativo con cifras inventadas. No es un cálculo real: el cómputo de cada pena se verifica caso por caso.</p>
+      <div class="stack-bar" role="img" aria-label="Ejemplo: 24 meses de tiempo físico y 6 meses de tiempo redimido">
+        <div class="stack-physical">24 meses</div>
+        <div class="stack-redeemed">6 meses</div>
+      </div>
+      <p class="legend"><span><strong>Tiempo físico:</strong> días efectivamente en el establecimiento</span> <span class="bronze"><strong>Tiempo redimido:</strong> reconocido por actividades certificadas</span></p>
+    </div>
+  </section>
+
+  <!-- Sección 4: fracciones -->
+  <section id="fracciones" class="section container">
+    <div class="rule"></div>
+    <h2 class="section-title">Ruta de beneficios: fracciones de 1/3, 3/5 y 4/5</h2>
+    <p class="section-intro">Cada fracción se relaciona con un beneficio distinto y tiene condiciones propias. Seleccione una para ver el detalle.</p>
+    <div class="tabs" id="pestanas" role="group" aria-label="Fracción de la condena">
+      <!-- Los botones se generan en js/main.js -->
+    </div>
+    <article class="card detail" id="detalle" aria-live="polite">
+      <h3 id="detalle-titulo"></h3>
+      <p class="detail-sub" id="detalle-sub"></p>
+      <div class="detail-rows" id="detalle-filas"></div>
+    </article>
+    <p class="small muted">Los colores solo distinguen los temas. No son categorías jurídicas.</p>
+  </section>
+
+  <!-- Sección 5: qué revisar -->
+  <section id="revisar" class="section container">
+    <div class="rule"></div>
+    <h2 class="section-title">Qué revisar antes de solicitar un beneficio</h2>
+    <p class="section-intro">Esta lista ordena la revisión inicial. No calcula si una persona tiene derecho a un beneficio.</p>
+    <form class="checklist" onsubmit="return false">
+      <fieldset>
+        <legend class="sr-only">Lista de revisión</legend>
+        <label><input type="checkbox"><span><strong>Situación jurídica</strong><br><span class="small muted">Confirme que la persona es condenada y que no hay trámites pendientes que cambien el análisis.</span></span></label>
+        <label><input type="checkbox"><span><strong>Pena impuesta</strong><br><span class="small muted">Verifique la sentencia y el tiempo total de la condena.</span></span></label>
+        <label><input type="checkbox"><span><strong>Tiempo cumplido</strong><br><span class="small muted">Cuente el tiempo efectivamente privado de la libertad.</span></span></label>
+        <label><input type="checkbox"><span><strong>Redenciones reconocidas</strong><br><span class="small muted">Revise qué periodos ya fueron reconocidos y cuáles siguen pendientes de certificar.</span></span></label>
+        <label><input type="checkbox"><span><strong>Fase del tratamiento</strong><br><span class="small muted">Identifique en qué fase está clasificada la persona.</span></span></label>
+        <label><input type="checkbox"><span><strong>Condiciones del beneficio</strong><br><span class="small muted">Revise conducta, arraigo y los demás requisitos de ese beneficio en concreto.</span></span></label>
+        <label><input type="checkbox"><span><strong>Restricciones y requerimientos</strong><br><span class="small muted">Busque restricciones legales, órdenes de captura u otras circunstancias que afecten el trámite.</span></span></label>
+      </fieldset>
+    </form>
+    <p class="muted">Ante cualquier duda, consulte con el Consultorio Jurídico o con un abogado antes de presentar una solicitud.</p>
+  </section>
+
+  <!-- Sección 6: autoridades -->
+  <section id="autoridades" class="section container">
+    <div class="rule"></div>
+    <h2 class="section-title">Autoridades y procedimiento</h2>
+    <p class="section-intro">Certificar una actividad, evaluar el tratamiento y decidir sobre un beneficio son actuaciones distintas, con autoridades distintas. La competente depende del beneficio solicitado.</p>
+    <div class="grid-3 steps-dark">
+      <div class="card-dark"><h3>Certificación</h3><p>El establecimiento certifica las actividades de trabajo, estudio o enseñanza.</p></div>
+      <div class="card-dark"><h3>Evaluación</h3><p>Las instancias penitenciarias valoran conducta y avance del tratamiento.</p></div>
+      <div class="card-dark"><h3>Decisión</h3><p>La autoridad competente decide sobre el beneficio solicitado.</p></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Instancias penitenciarias</h3>
+        <ul>
+          <li>Consejo de Evaluación y Tratamiento (CET)</li>
+          <li>Consejo de Disciplina</li>
+          <li>Junta de evaluación de trabajo, estudio y enseñanza</li>
+          <li>Dirección del establecimiento e INPEC</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Autoridades judiciales</h3>
+        <ul><li>Juez de ejecución de penas y medidas de seguridad</li></ul>
+        <p class="small muted">Cada ficha de beneficio indicará quién interviene en el trámite.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marco normativo -->
+  <section id="normas" class="section container section-last">
+    <div class="rule"></div>
+    <h2 class="section-title">Marco normativo y jurisprudencial</h2>
+    <p class="section-intro">Las explicaciones se presentan separadas de las normas que las respaldan, para que cada afirmación pueda verificarse en su fuente.</p>
+    <div class="card list-card">
+      <div class="list-row"><div class="list-key">Ley 65 de 1993</div><div>Código Penitenciario y Carcelario: fases del tratamiento, redención de pena, artículos 147, 147A y 148.</div></div>
+      <div class="list-row"><div class="list-key">Ley 599 de 2000, artículo 64</div><div>Código Penal: libertad condicional.</div></div>
+      <div class="list-row"><div class="list-key">Ley 1709 de 2014</div><div>Reformó artículos de la Ley 65 de 1993 y del Código Penal, incluido el artículo 64.</div></div>
+      <div class="list-row"><div class="list-key">Jurisprudencia constitucional</div><div>Sentencias relevantes, entre ellas la C-757 de 2014. [Completar en la entrega final]</div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="footer-title">Mi ruta hacia la libertad</p>
+      <p>Proyecto académico del Consultorio Jurídico, Universidad Católica de Colombia. Bogotá D.C., 2026.</p>
+    </div>
+    <div>
+      <p>Maria Paula Moreno Aponte, Carol Daniela Coronado Diaz y Sergio Alejandro Rodriguez Cortes.</p>
+      <p>Contenido informativo. No constituye asesoría jurídica ni garantiza la concesión de ningún beneficio.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
