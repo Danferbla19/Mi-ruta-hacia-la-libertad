@@ -38,3 +38,19 @@ Abra `index.html` en el navegador.
 Los textos marcados con `[Por confirmar]` y la sección de jurisprudencia deben revisarse contra las fuentes antes de la entrega final. También conviene confirmar las fases del tratamiento (artículo 144 de la Ley 65 de 1993) y la vigencia de los artículos 147, 147A y 148.
 
 Contenido informativo. No constituye asesoría jurídica ni garantiza la concesión de ningún beneficio.
+
+## Calculadora orientativa
+
+Sección `#calculadora` de la página. Recibe la pena (años, meses, días), la fecha de inicio, la fecha de corte y los días de redención, y estima el tiempo cumplido y lo que falta para 1/3, 3/5 y 4/5.
+
+- `js/calculo.js`: la lógica, sin interfaz. Funciona en el navegador y en Node.
+- `js/calculadora-ui.js`: conecta el formulario con la lógica.
+- `tests/calculo.test.js`: pruebas con resultados calculados a mano. Ejecutar con `node tests/calculo.test.js`.
+
+Convenciones (marcadas "[Por confirmar]" hasta validarlas con quienes pidieron el proyecto):
+- 1 mes = 30 días y 1 año = 360 días.
+- El tiempo físico cuenta desde el día de inicio hasta el de corte, ambos incluidos.
+- Tiempo cumplido = tiempo físico + redención reconocida.
+- Cada fracción se redondea hacia arriba.
+
+La herramienta es orientativa: solo mide el requisito de tiempo y no reemplaza el cómputo del juez ni la asesoría jurídica.

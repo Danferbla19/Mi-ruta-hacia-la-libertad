@@ -24,6 +24,7 @@
       <a href="#fases">Fases</a>
       <a href="#redencion">Redención</a>
       <a href="#fracciones">Fracciones</a>
+      <a href="#calculadora">Calculadora</a>
       <a href="#revisar">Qué revisar</a>
       <a href="#autoridades">Autoridades</a>
       <a href="#normas">Normas</a>
@@ -119,6 +120,56 @@
     <p class="small muted">Los colores solo distinguen los temas. No son categorías jurídicas.</p>
   </section>
 
+  <!-- Calculadora orientativa -->
+  <section id="calculadora" class="section container">
+    <div class="rule"></div>
+    <h2 class="section-title">Calculadora orientativa de tiempo cumplido</h2>
+    <p class="section-intro">Con la pena impuesta, la fecha de inicio y la redención reconocida, la calculadora estima cuánto tiempo lleva cumplido y cuánto falta para llegar a 1/3, 3/5 y 4/5. Solo mide el tiempo: no decide si procede un beneficio.</p>
+
+    <div class="calc-examples">
+      <span class="calc-examples-label">Probar con un caso de ejemplo (datos inventados):</span>
+      <button type="button" class="btn btn-outline" data-ejemplo="A">Caso A: recién comienza</button>
+      <button type="button" class="btn btn-outline" data-ejemplo="B">Caso B: a mitad de camino</button>
+      <button type="button" class="btn btn-outline" data-ejemplo="C">Caso C: ya avanzado</button>
+    </div>
+
+    <form id="calc-form" class="card calc-form" novalidate>
+      <fieldset>
+        <legend>Pena impuesta</legend>
+        <div class="calc-fields">
+          <div class="field"><label for="penaAnios">Años</label><input id="penaAnios" name="penaAnios" type="number" inputmode="numeric" min="0" step="1" placeholder="0"></div>
+          <div class="field"><label for="penaMeses">Meses</label><input id="penaMeses" name="penaMeses" type="number" inputmode="numeric" min="0" step="1" placeholder="0"></div>
+          <div class="field"><label for="penaDias">Días</label><input id="penaDias" name="penaDias" type="number" inputmode="numeric" min="0" step="1" placeholder="0"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Fechas</legend>
+        <div class="calc-fields">
+          <div class="field"><label for="fechaInicio">Inicio de la privación de la libertad</label><input id="fechaInicio" name="fechaInicio" type="date"><small>Día de la captura o desde el que se cuenta la detención.</small></div>
+          <div class="field"><label for="fechaCorte">Fecha de corte</label><input id="fechaCorte" name="fechaCorte" type="date"><small>Hasta cuándo se cuenta. Por defecto, hoy.</small></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Redención</legend>
+        <div class="calc-fields">
+          <div class="field"><label for="redencionDias">Días de redención ya reconocidos</label><input id="redencionDias" name="redencionDias" type="number" inputmode="numeric" min="0" step="1" placeholder="0"><small>Solo los reconocidos por la autoridad competente.</small></div>
+          <div class="field"><label for="ritmoRedencion">Redención que espera seguir sumando (opcional)</label><input id="ritmoRedencion" name="ritmoRedencion" type="number" inputmode="decimal" min="0" step="any" placeholder="0"><small>Días redimidos por mes. Solo cambia las fechas estimadas.</small></div>
+        </div>
+      </fieldset>
+
+      <div class="calc-actions">
+        <button type="submit" class="btn btn-primary">Calcular</button>
+        <button type="reset" class="btn btn-outline">Limpiar</button>
+      </div>
+    </form>
+
+    <div id="calc-errores" class="calc-errors" role="alert" hidden></div>
+    <div id="calc-resultado" class="calc-result" aria-live="polite" hidden></div>
+    <p class="small muted calc-method">Cómo se calcula: la pena se pasa a días (mes de 30 días, año de 360). El tiempo cumplido es el tiempo físico, contado desde el día de inicio hasta el de corte, más la redención reconocida. Cada fracción se redondea hacia arriba. [Por confirmar con quienes validan el proyecto]</p>
+  </section>
+
   <!-- Sección 5: qué revisar -->
   <section id="revisar" class="section container">
     <div class="rule"></div>
@@ -194,6 +245,8 @@
   </div>
 </footer>
 
+<script src="js/calculo.js" defer></script>
+<script src="js/calculadora-ui.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
